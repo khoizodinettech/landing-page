@@ -5,7 +5,7 @@ export async function GET(
   req: NextRequest,
   { params }: { params: { filename: string } }
 ) {
-  const { filename } = await params;
+  const { filename } = params;
   try {
     const image = await ImageService.getInstance().getImage(filename);
     return new NextResponse(image, {
