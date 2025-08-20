@@ -40,9 +40,9 @@ const Simple = () => {
                 <div className="flex flex-col justify-center items-center px-8 pb-8 pt-10 w-full">
                   <ul className="grid  gap-3 w-full max-w-box_simple pb-7  font-normal  text-span">
                     <li className=" text-left ">
-                      <div 
-                        className="[&_p]:block [&_p]:mb-2 [&_p]:m-0 [&_p_span]:inline-flex [&_p_span]:items-center [&_p_span]:gap-2 [&_p_span]:whitespace-nowrap [&_p_span]:min-w-max overflow-x-auto"
-                        dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(plan.content)}}
+                     <div
+                        className="[&_p]:flex [&_p]:items-center [&_p]:gap-2 [&_p]:m-0 [&_svg]:shrink-0"
+                        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(plan.content) }}
                       />
                     </li>
                   </ul>

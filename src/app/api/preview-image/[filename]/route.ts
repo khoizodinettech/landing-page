@@ -1,13 +1,14 @@
+import { NextRequest, NextResponse } from "next/server";
 import { ImageService } from "../../../../lib/service/image.service";
 
 export async function GET(
-  req: Request,
+  req: NextRequest,
   { params }: { params: { filename: string } }
 ) {
   const { filename } = await params;
   try {
     const image = await ImageService.getInstance().getImage(filename);
-    return new Response(image, {
+    return new NextResponse(image, {
       status: 200,
       headers: {
         "Content-Type": "image/png",
@@ -15,7 +16,7 @@ export async function GET(
     });
   } catch (error) {
     console.error("Error fetching image:", error);
-    return new Response(JSON.stringify({ error: "Backend error" }), {
+    return new NextResponse(JSON.stringify({ error: "Backend error" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
