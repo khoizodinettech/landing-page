@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -152,8 +152,8 @@ const ClientSay = () => {
           >
             {(client ?? []).map((plan) => {
               return (
-                <div className="cover-box group flex items-start sm:bg-bg_sm rounded-2xl shadow-md px-5 py-5 sm:px-6 sm:py-6 h-box_client w-box_client cursor-pointer">
-                <div className="flex text-left self-start">
+                <div key={plan.id} className="cover-box group flex items-start sm:bg-bg_sm rounded-2xl shadow-md px-5 py-5 sm:px-6 sm:py-6 h-box_client w-box_client cursor-pointer">
+                  <div className="flex text-left self-start">
                   <Image
                     src={`/api/preview-image/${plan.image}`}
                     alt="Client Avatar"
@@ -169,11 +169,11 @@ const ClientSay = () => {
                       {plan.title}
                     </span>
                   </div>
+                  </div>
+                  <span className="font-inter font-normal text-span sm:text-btn w-span_clien mt-3 text-left self-start block">
+                    "{plan.content}"
+                  </span>
                 </div>
-                <span className="font-inter font-normal text-span sm:text-btn w-span_clien mt-3 text-left self-start block">
-                  "{plan.content}"
-                </span>
-              </div>
               );
                })}
           </Slider>
