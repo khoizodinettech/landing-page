@@ -8,7 +8,7 @@ export abstract class BaseApiService {
     this.axiosInstance = this.createAxiosInstance();
   }
   private getBaserUrl(): string {
-    const NEST_API = process.env.NEXT_PUBLIC_API;
+    const NEST_API = process.env.API_URL;
     return `${NEST_API}`;
   }
 
