@@ -1,5 +1,4 @@
 'use client'
-import Script from "next/script";
 import Choose from "../lib/components/choose/choose";
 import Client from "../lib/components/client-say/client";
 import Experience from "../lib/components/experience/experience";
@@ -17,9 +16,6 @@ export default function Home() {
         <Simple />
         <Experience />
       </main>
-      {/* <Script async src="https://intern-chatbot-widget.zodinet.tech/widget.js" data-client-key="test-key"> */}
-
-      {/* </Script> */}
     </div>  
   );
 }
