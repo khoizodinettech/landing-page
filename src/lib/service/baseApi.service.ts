@@ -17,7 +17,7 @@ export abstract class BaseApiService {
       baseURL: this.baseUrl,
       timeout: 10000,
       headers: {
-        secret: process.env.NEXT_PUBLIC_SECRET_KEY || "",
+        secret: process.env.SECRET_KEY || "",
         "Content-Type": "application/json",
       },
     });
