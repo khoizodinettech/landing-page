@@ -16,7 +16,7 @@ export default function Home() {
         <Simple />
         <Experience />
       </main>
-      <script async src="http://intern-chatbot-widget.zodinet.tech/widget.js" data-client-key='hello'></script>
+      <script async src="https://intern-chatbot-widget.zodinet.tech/widget.js" data-client-key='hello'></script>
     </div>  
   );
 }
