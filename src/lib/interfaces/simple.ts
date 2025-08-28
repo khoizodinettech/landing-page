@@ -1,8 +1,9 @@
 export interface Simple {
-    id: string | number;
-    name: string;
-    price: string;
-    cusmonth: string;
-    content: string;
-    popular?: boolean;
+  id: string | number;
+  name: string;
+  price: string;
+  cusmonth: string;
+  content: string;
+  popular?: boolean;
+  createdAt: Date;
 }

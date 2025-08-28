@@ -1,13 +1,22 @@
 "use client";
 import DOMPurify from 'dompurify';
 import useFetchSimple from '../../hooks/usehookSimple';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 const Simple = () => {
      const { simple,  fetchSimple } = useFetchSimple();
 
   useEffect(() => {
     fetchSimple();
   }, []);
+
+   const sortedSimple = useMemo(() => {
+    const arr = Array.isArray(simple) ? [...simple] : [];
+    return arr.sort((a, b) => {
+      const ad = new Date(a?.createdAt ?? 0).getTime();
+      const bd = new Date(b?.createdAt ?? 0).getTime();
+      return bd - ad;
+    });
+  }, [simple]);
   return (
     <div className="w-full flex flex-col justify-center items-center bg-white">
       <div className="py-14 px-5 md:py-20 md:px-40">
@@ -20,7 +29,7 @@ const Simple = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-6 pt-7 sm:gap-8 sm:pt-16 w-full max-w-7xl mx-auto">
-          {(simple ?? []).map((plan) => {
+          {(sortedSimple ?? []).map((plan) => {
             return (
               <div key={plan.id} className={`max-w-cover_box_simple rounded-box ${
                 plan.popular ? 'border-2 border-border_simple  flex flex-col items-center pt-3 relative' : 'shadow-sl'
