@@ -60,8 +60,8 @@ const settings = {
   slidesToShow: 3,
   className: "center",
   centerMode: true,
-  centerPadding: "90px",
-  slidesToScroll: 1,
+  centerPadding: "60px",
+  slidesToScroll: 5,
   prevArrow: <SamplePrevArrow />,
   nextArrow: <SampleNextArrow />,
   customPaging: () => (
@@ -100,28 +100,37 @@ const settings = {
   ),
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToScroll: 5,
         centerMode: true,
-        centerPadding: "30px",
+        centerPadding: "60px",
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 5,
+        centerMode: true,
+        centerPadding: "40px",
+      },
+    },
+    {
+      breakpoint: 920,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 5,
         centerMode: true,
-        centerPadding: "90px",
+        centerPadding: "60px",
       },
     },
     {
       breakpoint: 640,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 5,
         centerMode: true,
         centerPadding: "5px",
       },

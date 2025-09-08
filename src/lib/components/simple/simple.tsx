@@ -28,11 +28,11 @@ const Simple = () => {
             Choose the perfect plan for your needs. No hidden fees.
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 justify-center items-center gap-6 pt-7 sm:gap-8 sm:pt-16 w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-7 sm:gap-8 sm:pt-16 w-full max-w-7xl mx-auto justify-items-center">
           {(sortedSimple ?? []).map((plan) => {
             return (
-              <div key={plan.id} className={`max-w-cover_box_simple rounded-box ${
-                plan.popular ? 'border-2 border-border_simple  flex flex-col items-center pt-3 relative' : 'shadow-sl'
+              <div key={plan.id} className={`w-full max-w-sm rounded-box ${
+                plan.popular ? 'border-2 border-border_simple flex flex-col items-center pt-3 relative' : 'shadow-sl'
               }`}>
                 <h2 className={`font-bold text-h2_container text-center pt-5 ${plan.popular ? "pt-5" : "pt-8"}`}>
                   {plan.name}

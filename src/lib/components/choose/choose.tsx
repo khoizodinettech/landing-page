@@ -18,7 +18,7 @@ const Choose = () => {
             competition
           </h2>
         </div>
-        <div className="grid md:grid-cols-4 grid-cols-1 mb-exper_box gap-6 md:gap-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-exper_box">
           <div className="cursor-pointer flex flex-col justify-center rounded-box shadow-sl items-center w-full max-w-box_max_mobi md:max-w-box_max h-40 md:h-56">
             <MessagesSquare className="w-10 h-10 text-purple mb-3 mt-6" />
             <h2 className="font-inter font-bold text-h2_container_mobi tracking-ls md:text-h2_container sm:px-4 text-center">
