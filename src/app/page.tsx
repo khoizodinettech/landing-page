@@ -19,7 +19,7 @@ export default function Home() {
       <script
       async
       src="https://intern-chatbot-widget.zodinet.tech/widget.js"
-      data-client-key="f308c2f7-71c4-4366-bc09-dc469d5763e4"
+      data-client-key="70f9239c-a6e9-43c3-b340-379779493591"
     ></script>
     </div>  
   );
